@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StikyMenu</title>
+    <Style>
+        body{
+            margin: 0px;
+        }
+        #logo{
+            width: 250px;
+            height:auto;   
+        }
+        #header{
+            text-align: center;
+        }
+        #menu{
+            text-align: center;
+            background-color: rgb(160, 110, 95);
+            
+            
+        }
+        #menu li{
+            display: inline-block;
+            padding: 15px 10px;
+            font-size: 18px;
+            font-weight:bold;
+            color:white;
+        }
+        #container{
+            text-align: center;
+            padding: 50px 100px;
+
+        }
+        #container p{
+            text-align: justify;
+        }
+        #container img{
+            width: 100%;
+            height: auto;
+        }
+        .stiky{
+            position:fixed;
+            top: 0px;
+            width: 100%;
+        }
+    </Style>
+</head>
+<body>
+    <div id = "header"><img src="images/naturelogo.png" id="logo" alt="logo"></div>
+    <div id="menu">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Our Team</li>
+        <li>Client</li>
+        <li>Contact Us</li>    
+    </div>
+    
+    <div id="container">
+        <h1>About Us</h1>
+        <img src="images/aboutus.jpg" alt="aboutus">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque maiores placeat omnis aspernatur, officia, harum hic repellat mollitia pariatur sint corrupti accusamus deserunt autem fuga! Provident vitae veritatis, laboriosam ad facilis maiores vel earum aut natus non obcaecati. Autem, suscipit eum ipsum saepe voluptates perferendis id dignissimos ducimus recusandae laborum quos doloremque? Autem deleniti, dolorum omnis laborum culpa ab rem! Non ea velit nesciunt. Reprehenderit architecto temporibus rem nobis sapiente error ducimus fugit cum asperiores magni commodi, expedita ratione. Pariatur eligendi totam magnam reiciendis, officiis odio commodi consectetur, dolores cum quo deserunt quia accusantium atque eaque doloremque facere? Nulla ipsam, accusamus perferendis doloribus quidem eos sapiente ipsum optio eum velit! Animi fuga assumenda nostrum quaerat quos provident accusamus perspiciatis tempora aut eum. Tempora dolores pariatur nihil deserunt numquam voluptates culpa neque itaque? Provident doloribus maiores sint facere distinctio eaque quis amet, earum sed ipsum rerum repudiandae officia! Et voluptatum corrupti a dignissimos ut voluptate, quod repellendus sunt excepturi ab alias sint nam sed velit voluptatibus quis odio quasi perspiciatis, iusto recusandae eligendi consequuntur. Eos fugit ratione, iste hic assumenda voluptatum voluptas qui suscipit, ab doloribus quas aperiam natus libero at sequi vel animi ipsa ipsam vitae labore quaerat dolores sapiente nisi. Illo mollitia aspernatur ex vel magni esse vitae unde facere, eveniet, harum tenetur. Fugit, cumque, nobis odit inventore officia architecto unde quidem, corporis doloribus alias aut veniam vel? Saepe, pariatur rerum. Iure provident quidem, voluptatibus tenetur saepe consectetur, incidunt, molestias voluptate eius ducimus est corporis ipsam laboriosam itaque. Nobis natus dolorem sed officia velit aut, nihil impedit quisquam mollitia molestiae? Itaque assumenda enim repudiandae, recusandae quis, a sint corrupti laborum veritatis qui suscipit nulla nemo asperiores non dolores illum fuga placeat, mollitia nostrum laudantium cupiditate voluptates vero. Eaque repudiandae pariatur, enim doloribus nemo nihil, ab dolorem illum optio aut nobis debitis maiores eligendi. Velit ullam, accusantium vitae tempore voluptatem asperiores eveniet quod quis eius cupiditate ipsam dignissimos animi odio molestiae omnis illo aut perspiciatis nesciunt laboriosam, dicta sint itaque porro. Expedita eos perspiciatis dicta tempore velit veniam, aspernatur quibusdam aliquid, voluptatum nesciunt dignissimos nam voluptatem quidem, sequi cum odit distinctio ea. Voluptatum, maxime consectetur neque nesciunt amet cum mollitia laborum atque natus iure soluta, nulla ut beatae perspiciatis tenetur totam minus quidem exercitationem. Dicta eaque, corrupti porro reprehenderit ipsa magni veniam iure velit deserunt, impedit saepe hic illo maxime voluptatibus repellat sint molestias eveniet dolorem veritatis quia fugiat at doloremque. Iure blanditiis harum non perspiciatis. Neque deserunt provident aperiam molestias vitae dolorem ipsum magnam tempora at nulla laborum sed repellendus illo impedit cupiditate est placeat, eum exercitationem veniam, dolores aut obcaecati alias? Eum quidem saepe pariatur odit nemo voluptas odio voluptate beatae perferendis impedit quisquam delectus ipsum animi, illum corrupti, atque iste corporis quaerat, quasi veniam voluptatem obcaecati inventore. Fuga, voluptate! Iste, a vitae impedit blanditiis magnam mollitia est laboriosam voluptatum nulla repellat libero, recusandae sunt expedita aperiam sequi id explicabo minima. Et error vero ex eum neque, voluptas architecto nisi assumenda totam repellendus culpa cupiditate dolorum corporis! Nam.
+        </p>
+    </div>
+    <script>
+        window.addEventListener('scroll',function(){
+            let menu = document.getElementById('menu');
+            if(pageYOffset>=190)
+            {
+                menu.classList.add("stiky");
+            }
+            else{
+                menu.classList.remove("stiky");
+            }
+        })
+    </script>
+</body>
+</html>

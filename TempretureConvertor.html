@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempreture Convertor</title>
+    <style>
+        body{
+            margin: 50px 100px;
+        }
+        h1{
+            text-align : center;
+            color :  rgb(34,240,50);
+        }
+        #container{
+            text-align:center;
+            padding: 50px;
+            background-color: aquamarine;
+
+        }
+        .input{
+            display: inline-block;
+            height :100px;
+        }
+        .ipn{
+            text-align: center;
+            padding: 5px 10px;
+            margin: 5px;
+            font-size: 30px;
+            font-weight: bold;
+            width: 250px;
+            
+            
+        }
+        input{
+            text-align: center;
+        }
+        label{
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id = "container">
+        
+    <h1>Tempreture Convertor</h1>
+    <div class="input">
+        <label >Celsius</label><br>
+        <input type="number" value = "0" id = "cel" class="inp" >
+    </div>
+    <div class="input">
+        <label >Fahrenheit</label><br>
+        <input type="number" value = "32" id = "fah" class="inp">
+    </div>
+</div>
+    <script>
+        let cel = document.getElementById("cel");
+        let fah = document.getElementById("fah");
+        cel.addEventListener("input",function(){
+            console.log("cel is activated..");
+            let cele = this.value 
+            fah.value = (this.value/.5556) +32;
+        });
+        fah.addEventListener("input",function(){
+            console.log("fag is activated");
+            let far = this.value;
+            cel.value = (far - 32) * .5556 ;            
+        });
+    </script>
+</body>
+</html>

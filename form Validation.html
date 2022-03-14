@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body{
+            background-color:#7f8cff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #form-container{
+            background-color: white; 
+            
+            padding:  50px 80px;
+            text-align: center;
+            
+        }
+        h2{
+            margin: 0px 0px 10px 0px;
+        }
+        input{
+            width: 200px;
+            margin: 10px 0px;
+            padding: 10px;
+            background-color: white;
+        }
+        input[type="submit"]{
+            width: 223px;
+            border: 0px;
+            color:white;
+            background-color:#7f8cff;
+        }
+
+        #uError{
+            margin:0px;
+            color:red;
+            text-align: left;
+        }
+
+        #pError{
+            margin:0px;
+            color:red;
+            text-align: left;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="form-container">
+        <h2>Login</h2>
+        <form action="" onsubmit="return submitbtn()">
+            <input type="text" placeholder="username" id="username"><br>
+            <p id="uError"></p>
+            <input type="password" placeholder="password" id="password"><br>
+            <p id="pError"></p>
+            <input type="submit"id="submit" >
+        </form>
+    </div>
+    <script>
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let flage = true;
+
+        function submitbtn(){
+            if(username.value == ""){
+                document.getElementById('uError').innerHTML = "please enter username";
+                 flage =   false;
+            }else if(username.value.length<3){
+            
+                document.getElementById('uError').innerHTML = "username requir min three char";
+                 flage = false;
+            }else{
+                document.getElementById('uError').innerHTML = ""
+                 flage = true;
+            }
+            
+            if(password.value == ""){
+                document.getElementById('pError').innerHTML = "please enter password";
+                 flage = false;
+            }
+            else{
+                document.getElementById('pError').innerHTML = "";
+                 flage = true;
+            }
+            return flage;
+            
+            
+        }
+    </script>
+</body>
+</html>
